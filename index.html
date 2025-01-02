@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Контрольное_задание_9</title>
+
+    <link href="styles/jquery-ui.min.css" rel="stylesheet">
+    <link href="styles/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/slick.css"/>
+    <link rel="stylesheet" href="styles/slick-theme.css"/>
+
+    <link href="styles/animate.min.css" rel="stylesheet">
+    <link href="styles/magnific-popup.css" rel="stylesheet">
+    <link href="styles/hover-min.css" rel="stylesheet">
+
+    <link href="styles/style.css" rel="stylesheet">
+    <link href="styles/adaptive.css" rel="stylesheet">
+
+</head>
+<body class="overflow-visible">
+<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol id="check2" viewBox="0 0 16 16">
+        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+    </symbol>
+    <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+    </symbol>
+    <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+    </symbol>
+    <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+    </symbol>
+</svg>
+
+<header data-bs-theme="dark" class="wow animate__animated animate__bounce">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-light overflow-hidden">
+        <div class="container-fluid">
+            <a class="navbar-brand wow animate__animated animate__lightSpeedInLeft" href="#">Logo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0 wow animate__animated animate__lightSpeedInLeft">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-muted" href="#">Преимущества</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-muted" href="#">Цены</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-muted" href="#">Контакты</a>
+                    </li>
+                </ul>
+                <form class="d-flex wow animate__animated animate__lightSpeedInRight" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Поиск чая" aria-label="Search">
+                    <button class="btn btn-outline-primary px-4" type="submit">Найти</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+<main class="container overflow-hidden">
+
+    <div class="position-relative single-item h-auto mt-4 mb-5 wow animate__animated animate__zoomInUp">
+
+        <div class="image">
+            <img class="" src="/images/image1.png" alt="1">
+            <div class="position-absolute top-0 mt-5 ms-5">
+                <div class="px-5 mx-3 py-5 my-5 ">
+                    <h1 class="mt-5 fw-bold">Скидки на травянные чаи</h1>
+                    <p class="d-inline-block pb-5 pt-5 ">Узай все подробности, заполнив заявку</p>
+                    <p>
+                        <a class="hvr-shadow-radial hvr-bounce-in btn btn-sm btn-primary pe-5 ps-5 pt-2 pb-2 wow animate__animated animate__heartBeat"
+                           href="#" role="button"> Заполнить </a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="image">
+            <img class="rounded float-end me-3 pe-5 pt-5" src="/images/image2.png" alt="2">
+            <div class="position-absolute top-0 mt-5 ms-5">
+                <div class="px-5 mx-3 py-5 my-5">
+                    <h1 class="mt-5 fw-bold">Закажи три пачки чая
+                        <br>
+                        и получи подарок</h1>
+                    <p class="pb-5 pt-5"><a
+                            class="hvr-shadow-radial hvr-bounce-in btn btn-sm btn-primary pe-5 ps-5 pt-2 pb-2 wow animate__animated animate__heartBeat"
+                            href="#"
+                            role="button">Заказать</a></p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="image">
+            <img src="/images/image3.png" alt="3">
+            <div class="position-absolute top-0 mt-5 ms-5">
+                <div class="px-5 mx-3 py-5 my-5">
+                    <h1 class="mt-5 fw-bold">Попробуй нашу новинку
+                        <br> — ягодный чай</h1>
+                    <p class="pb-5 pt-5"><a
+                            class="hvr-shadow-radial hvr-bounce-in btn btn-sm btn-primary pe-5 ps-5 pt-2 pb-2 wow animate__animated animate__heartBeat"
+                            href="#"
+                            role="button">Заказать</a></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <h3 class="fw-bold text-center mb-4 wow animate__animated animate__rotateInUpLeft">Наши чайные коллекции</h3>
+
+
+    <div class="row justify-content-md-center flex-md-wrap parent-container ">
+
+        <div class="col-lg-4 col-md-6 col-sm-6 mb-4 wow animate__animated animate__lightSpeedInLeft">
+            <div class="border bg-light border-2 rounded-1">
+                <a href="images/path-to-image-1.png">
+                    <img class="w-100" src="images/carta1.png" alt="1">
+                </a>
+                <h5 class="fw-bold p-3">Детокс чай лайм</h5>
+                <p class="pb-2 ps-3">Великолепный чай внесет в вашу жизнь яркие краски и вкус расслабления</p>
+                <p class="ps-3">
+                    <button
+                            class="hvr-underline-from-center hvr-grow-rotate btn btn-sm btn-primary pe-5 ps-5 pt-2 pb-2 wow animate__animated animate__heartBeat"
+                            href="#" role="button">Подробнее
+                    </button>
+                </p>
+            </div>
+        </div>
+
+        <div class="overflow-hidden col-lg-4 col-md-6 col-sm-6 mb-4 wow animate__animated animate__flip">
+            <div class="border bg-light border-2 rounded-1">
+                <a href="images/path-to-image-1.png">
+                    <img class="w-100" src="images/carta2.png" alt="2">
+                </a>
+                <h5 class="fw-bold p-3">Ягодный чай</h5>
+                <p class="pb-2 ps-3">Нотки ягод позволят вам расслабиться и насладиться великолепием этого чая</p>
+                <p class="ps-3">
+                    <button
+                            class="hvr-underline-from-center hvr-grow-rotate btn btn-sm btn-primary pe-5 ps-5 pt-2 pb-2 wow animate__animated animate__heartBeat"
+                            href="#"
+                            role="button">Подробнее
+                    </button>
+                </p>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-6 mb-4 wow animate__animated animate__lightSpeedInRight">
+            <div class="border bg-light border-2 rounded-1">
+                <a href="images/path-to-image-1.png">
+                    <img class="w-100" src="images/carta3.png" alt="3">
+                </a>
+                <h5 class="fw-bold p-3">Цветочный чай</h5>
+                <p class="pb-2 ps-3">Душистые цветы создают невероятный аромат и наполняют вас энергией</p>
+                <p class="ps-3">
+                    <button
+                            class="hvr-underline-from-center hvr-grow-rotate btn btn-sm btn-primary pe-5 ps-5 pt-2 pb-2 wow animate__animated animate__heartBeat"
+                            href="#"
+                            role="button">Подробнее
+                    </button>
+                </p>
+            </div>
+        </div>
+
+
+        <div class="col-lg-4 col-md-6 col-sm-6 mb-4 wow animate__animated animate__lightSpeedInLeft">
+            <div class="border bg-light border-2 rounded-1">
+                <a href="images/path-to-image-1.png">
+                    <img class="w-100" src="images/carta4.png" alt="4">
+                </a>
+                <h5 class="fw-bold p-3">Очищающий чай</h5>
+                <p class="pb-2 ps-3">Бесподобный чай для получения утреннего заряда бодрости</p>
+                <p class="ps-3">
+                    <button
+                            class="hvr-underline-from-center hvr-grow-rotate btn btn-sm btn-primary pe-5 ps-5 pt-2 pb-2 wow animate__animated animate__heartBeat"
+                            href="#" role="button">Подробнее
+                    </button>
+                </p>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-6 mb-4 wow animate__animated animate__flip">
+            <div class="border bg-light border-2 rounded-1">
+                <a href="images/path-to-image-1.png">
+                    <img class="w-100" src="images/carta5.png" alt="5">
+                </a>
+                <h5 class="fw-bold p-3">Кислый чай</h5>
+                <p class="pb-2 ps-3">Кислый чай для настоящих ценителей кислинки во время чаепития</p>
+                <p class="ps-3">
+                    <button
+                            class="hvr-underline-from-center hvr-grow-rotate btn btn-sm btn-primary pe-5 ps-5 pt-2 pb-2 wow animate__animated animate__heartBeat"
+                            href="#ot"
+                            role="button">Подробнее
+                    </button>
+                </p>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-6 mb-4 wow animate__animated  animate__lightSpeedInRight">
+            <div class="border bg-light border-2 rounded-1">
+                <a href="images/path-to-image-1.png">
+                    <img class="w-100" src="images/carta6.png" alt="6">
+                </a>
+                <h5 class="fw-bold p-3">Лимонная мята</h5>
+                <p class="pb-2 ps-3">Смесь лимона с мятой сделает ваш день самым лучшим</p>
+                <p class="ps-3">
+                    <button
+                            class="hvr-underline-from-center hvr-grow-rotate btn btn-sm btn-primary pe-5 ps-5 pt-2 pb-2 wow animate__animated animate__heartBeat"
+                            href="#ot"
+                            role="button">Подробнее
+                    </button>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <h3 class="fw-bold text-center mt-4 mb-4 wow animate__animated animate__pulse" id="ot">Ответы на часто задаваемые
+        вопросы</h3>
+
+    <div class="accordion row justify-content-center">
+
+        <div class="accordion-item">
+            <h3 class="accordion-header fs-5 text-break p-4 rounded rounded-3 border border-white wow animate__animated animate__backInLeft">
+                Собираете ли вы подарочные боксы?
+            </h3>
+            <div class="overflow-visible">
+                <p class=" lh-lg pb-0 mb-0 wow animate__animated animate__tada">
+                    Да, у нас есть такая услуга. Мы можем собрать подарочный бокс на любой вкус, объем и стоимость!
+                </p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h3 class="accordion-header  fs-5 text-break p-4 rounded rounded-3 border border-white wow animate__animated animate__backInRight">
+                Сколько у вас разновидностей чая?
+            </h3>
+            <div>
+                <p class=" lh-lg pb-0 mb-0">
+                    Достаточное количество, для приятных вечеров. Около 150 видов.
+                </p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h3 class="accordion-header  fs-5 text-break p-4 rounded rounded-3 border border-white wow animate__animated animate__backInLeft">
+                В какой срок осуществляется доставка?
+            </h3>
+            <div>
+                <p class=" lh-lg pb-0 mb-0">
+                    Всё зависит от расстояния и способа доставки. В среднем от 3-7 дней до 14-30 дней.
+                </p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h3 class="accordion-header  fs-5 text-break p-4 rounded rounded-3 border border-white wow animate__animated animate__backInRight">
+                У вас обновляется ассортимент?
+            </h3>
+            <div>
+                <p class=" lh-lg pb-0 mb-0">
+                    Конечно. Стараемся чаще удивлять наших покупателей, новыми видами и вкусами.
+                </p>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h3 class="accordion-header  fs-5 text-break p-4 rounded rounded-3 border border-white wow animate__animated animate__backInLeft">
+                Какого объема у вас пачки чая?
+            </h3>
+            <div>
+                <p class=" lh-lg pb-0 mb-0">
+                    Пакетированный 25шт, 50шт, 100шт в каробке. А так же весовой 100 грамм, 200 грамм, 500 грамм.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <h3 class="fw-bold text-center mt-5 mb-5 wow animate__animated animate__tada">Сделать заказ</h3>
+
+    <div class="d-flex justify-content-center">
+        <form class="row g-3 validate" id="form">
+            <div class="offset-md-3 col-md-2 offset-md-3">
+                <label for="inputName" class="form-label wow animate__animated animate__rubberBand">Имя</label>
+                <input type="text" class="form-control wow animate__animated animate__pulse" name="inputName"
+                       id="inputName">
+            </div>
+            <div class="col-md-2 ">
+                <label for="inputSurname" class="form-label wow animate__animated animate__rubberBand">Фамилия</label>
+                <input type="text" class="form-control surname wow animate__animated animate__pulse" name="inputSurname"
+                       id="inputSurname">
+            </div>
+            <div class="col-md-2">
+                <label for="inputTel" class="form-label wow animate__animated animate__rubberBand">Телефон</label>
+                <input type="tel" class="form-control wow animate__animated animate__pulse" name="inputTel"
+                       id="inputTel">
+            </div>
+            <div class="offset-md-3 col-md-3 offset-md-3">
+                <label for="inputCity" class="form-label wow animate__animated animate__rubberBand">Страна</label>
+                <input type="text" class="form-control wow animate__animated animate__pulse" name="inputCity"
+                       id="inputCity">
+            </div>
+            <div class="col-md-3">
+                <label for="inputZip" class="form-label wow animate__animated animate__rubberBand">Индекс</label>
+                <input type="text" class="form-control input-number wow animate__animated animate__pulse"
+                       name="inputZip" id="inputZip">
+            </div>
+            <div class="offset-md-3 col-md-6 offset-md-3">
+                <label for="inputAddress" class="form-label wow animate__animated animate__rubberBand">Адрес</label>
+                <input type="text" class="form-control wow animate__animated animate__pulse" name="inputAddress"
+                       id="inputAddress">
+            </div>
+            <div class="offset-md-3 col-6 offset-md-3">
+
+                <button type="submit" value="Validate" id="validateButton"
+                        class="hvr-round-corners hvr-back-pulse btn btn-sm btn-primary pe-5 ps-5 pt-2 pb-2 btn-primary wow animate__animated animate__heartBeat">
+                    Отправить
+                </button>
+
+            </div>
+        </form>
+    </div>
+
+</main>
+
+<footer class="container-fluid text-muted mt-5 overflow-visible">
+    <p class="overflow-visible">Все права защищены</p>
+</footer>
+
+
+<script src="scripts/bootstrap.min.js"></script>
+<script src="scripts/jquery-3.7.1.js"></script>
+<script src="scripts/jquery-3.6.0.min.js"></script>
+<script src="scripts/wow.min.js"></script>
+<script src="scripts/slick.min.js"></script>
+<script src="scripts/jquery-ui.min.js"></script>
+<script src="scripts/jquery.magnific-popup.js"></script>
+<script src="scripts/jquery-migrate-3.5.0.min.js"></script>
+<script src="scripts/jquery.validate.min.js"></script>
+
+<script src="scripts/script.js"></script>
+
+</body>
+</html>
